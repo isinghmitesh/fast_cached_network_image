@@ -7,11 +7,12 @@ issue_tracker: https://github.com/CHRISTOPANANJICKAL/fast_cached_network_image/i
 
 environment:
   sdk: ">=3.0.1 <4.0.0"
+  flutter: ">=3.16.4"
 
 dependencies:
   flutter:
     sdk: flutter
   dio: ^5.4.0
   hive_flutter: ^2.0.0-dev
-  uuid: ^4.3.1
+  uuid: ^4.2.2
 
