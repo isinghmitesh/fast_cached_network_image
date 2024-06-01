@@ -198,7 +198,7 @@ class _FastCachedImageState extends State<FastCachedImage>
   @override
   Widget build(BuildContext context) {
     if (_imageResponse?.error != null && widget.errorBuilder != null) {
-      _logErrors(_imageResponse?.error);
+      // _logErrors(_imageResponse?.error);
       return widget.errorBuilder!(
           context, Object, StackTrace.fromString(_imageResponse!.error!));
     }
@@ -236,7 +236,7 @@ class _FastCachedImageState extends State<FastCachedImage>
                   if (_animationController.status !=
                       AnimationStatus.completed) {
                     _animationController.forward();
-                    _logErrors(c);
+                    // _logErrors(c);
                     FastCachedImageConfig.deleteCachedImage(
                         imageUrl: widget.url, showLog: widget.showErrorLog);
                   }
@@ -369,11 +369,11 @@ class _FastCachedImageState extends State<FastCachedImage>
     }
   }
 
-  void _logErrors(dynamic object) {
-    if (widget.showErrorLog) {
-      debugPrint('$object - Image url : ${widget.url}');
-    }
-  }
+  // void _logErrors(dynamic object) {
+  //   if (widget.showErrorLog) {
+  //     debugPrint('$object - Image url : ${widget.url}');
+  //   }
+  // }
 }
 
 class _ImageResponse {
