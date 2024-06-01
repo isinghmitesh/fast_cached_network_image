@@ -41,3 +41,35 @@
 ## 1.2.0
 
 * Added cache key with UID instead of image url
+
+## 1.2.2
+
+* UUID and Dio updated to latest versions
+
+## 1.2.3
+
+* Fixed context mount issue
+
+## 1.2.4
+
+* Added contributors to readme
+
+## 1.2.5
+
+* Fix: logging even when log is disabled when image is deleted
+
+## 1.2.6
+
+* Changed disableErrorLog parameter to showErrorLog
+
+## 1.2.7
+
+* Added headers for the API 
+
+## 1.2.8
+
+* Fixed state not available issue
+ 
+* ## 1.2.9
+
+* Added tags
