@@ -420,16 +420,17 @@ class FastCachedImageConfig {
   ///[clearCacheAfter] property is used to set a  duration after which the cache will be cleared.
   ///Default value of [clearCacheAfter] is 7 days which means if [clearCacheAfter] is set to null,
   /// an image cached today will be cleared when you open the app after 7 days from now.
-  static Future<void> init({String? subDir, Duration? clearCacheAfter}) async {
+  static Future<void> init(
+      {required String path, Duration? clearCacheAfter}) async {
     if (_isInitialized) return;
 
     clearCacheAfter ??= const Duration(days: 7);
 
-    await Hive.initFlutter(subDir);
+    // await Hive.initFlutter(subDir);
     _isInitialized = true;
 
-    _imageKeyBox = await Hive.openLazyBox(_BoxNames.imagesKeyBox);
-    _imageBox = await Hive.openLazyBox(_BoxNames.imagesBox);
+    _imageKeyBox = await Hive.openLazyBox(_BoxNames.imagesKeyBox, path: path);
+    _imageBox = await Hive.openLazyBox(_BoxNames.imagesBox, path: path);
     await _clearOldCache(clearCacheAfter);
   }
 
