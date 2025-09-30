@@ -1,3 +1,14 @@
+## 1.3.4+6
+
+* Updated dependencies:
+  - dio: ^5.8.0+1 → ^5.9.0
+  - hive_ce_flutter: ^2.2.0 → ^2.3.2
+  - lints: ^5.1.1 → ^6.0.0
+* Updated example dependencies:
+  - cupertino_icons: ^1.0.2 → ^1.0.8
+  - flutter_lints: (no version) → ^6.0.0
+* Fixed SDK constraint in example to match main package (>=2.18.0 <4.0.0)
+
 ## 0.0.1
 
 * Initial release.
